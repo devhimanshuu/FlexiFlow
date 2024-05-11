@@ -3,7 +3,7 @@ import { SiGithub } from "react-icons/si";
 const Navbar = () => {
   return (
     <nav
-      className="relative max-w-9xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 "
+      className=" max-w-9xl  mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 fixed top-0 w-full z-10"
       aria-label="Global"
     >
       <div className="flex items-center justify-between gap-4">

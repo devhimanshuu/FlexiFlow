@@ -15,6 +15,8 @@ import {
 import { SortableContext, arrayMove } from "@dnd-kit/sortable";
 import { createPortal } from "react-dom";
 import TaskCard from "./TaskCard";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const FlexiFlow = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -34,7 +36,8 @@ const FlexiFlow = () => {
     })
   );
   return (
-    <div className="m-auto flex min-h-screen w-full items-center overflow-x-auto overflow-y-hidden px-[40px] ">
+    <div className="m-auto flex min-h-screen w-full items-center overflow-x-auto overflow-y-hidden px-[40px] flex-col ">
+      <Navbar />
       <DndContext
         sensors={sensors}
         onDragStart={onDragStart}
@@ -92,6 +95,7 @@ const FlexiFlow = () => {
           document.body
         )}
       </DndContext>
+      <Footer />
     </div>
   );
   function deleteTask(id: Id) {
